@@ -84,6 +84,8 @@ RUN cd /tmp && \
     curl -s https://repo.continuum.io/miniconda/Miniconda3-4.3.21-Linux-x86_64.sh -o miniconda.sh && \
     /bin/bash miniconda.sh -f -b -p $CONDA_DIR && \
     rm miniconda.sh && \
+    $CONDA_DIR/bin/conda config --system --add channels defaults && \
+    $CONDA_DIR/bin/conda config --system --add channels bioconda && \
     $CONDA_DIR/bin/conda config --system --add channels conda-forge && \
     $CONDA_DIR/bin/conda config --system --set auto_update_conda false && \
     conda clean -tipsy
