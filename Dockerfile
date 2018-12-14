@@ -69,7 +69,8 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
     xfonts-base \
     xvfb \
     zlib1g-dev \
-    bc
+    bc \
+    tzdata
     
 #################################
 # Python 3, plus packages
