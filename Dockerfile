@@ -100,6 +100,7 @@ WORKDIR /opt/homer
 RUN wget http://homer.ucsd.edu/homer/configureHomer.pl && \
     perl configureHomer.pl -install && \
     perl configureHomer.pl -install hg38 \
+    perl configureHomer.pl -install mm10 \
     ln -s /opt/homer/bin/makeTagDirectory /usr/local/bin/ && \
     ln -s /opt/homer/bin/findPeaks /usr/local/bin/
 
